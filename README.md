@@ -1,5 +1,7 @@
 # ChangFengCoursePlay
-使用python+opencv图像识别模拟鼠标操作刷长风网网课
+使用python+opencv图像识别模拟鼠标操作刷长风网网课。
+
+> 注意程序执行时不要遮挡住网页元素，否则无法触发图像识别。
 
 # 操作步骤
 1. [下载python3.8.2](https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe)
@@ -12,5 +14,4 @@
 7. pip install opencv-python==4.1.2.30
 8. 替换resources目录下图片资源
 9. cmd命令行输入`python autoPlay.py`执行本程序
-
-ESC中止程序执行。
+10. 按`ESC`键中止程序执行
