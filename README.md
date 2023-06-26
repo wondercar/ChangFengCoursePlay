@@ -1,7 +1,7 @@
 # ChangFengCoursePlay
 使用python+opencv图像识别模拟鼠标操作刷长风网网课。
 
-> 注意程序执行时不要遮挡住网页元素，否则无法触发图像识别。
+> 注意程序执行时不要遮挡住网页元素，否则无法触发图像识别，程序运行后将会持续触发鼠标事件，会一定程度上影响电脑使用。
 
 # 操作步骤
 1. [下载python3.8.2](https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe)
