@@ -2,7 +2,6 @@ from ctypes import util
 import utils  # utils组件
 import pyautogui  # 图像识别组件
 import time
-import pyperclip  # 键盘组件
 import keyboard
 import _thread
 
@@ -10,8 +9,8 @@ fileBase = "resources/"  # 文件路径前缀
 
 def zdtk():
     while True:
-        # 首先找到定位符
-        mark = utils.ocr(fileBase + "wkw.png")
+        # 首先查找未播完课程，其次查找未播放课程
+        mark = utils.ocr(fileBase + "wkw.png") or utils.ocr(fileBase + "wk.png")
         # 是否播放标识
         if mark is not None:
             # 移动到定位符位置
@@ -62,8 +61,8 @@ def zdtk():
                 print('未找到待播放课程，继续下滑页面')
                 utils.mouseScroll(-500)# 未找到目标课程则继续下滑
                 time.sleep(1)
-    else:
-        print('未找到定位标识，检查当前课程页面是否被遮盖')
+        else:
+            print('未找到定位标识，检查当前课程页面是否被遮盖')
 # 主函数
 if __name__ == '__main__':
     try:
