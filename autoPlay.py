@@ -9,11 +9,11 @@ import _thread
 fileBase = "resources/"  # 文件路径前缀
 
 def zdtk():
-    # 首先找到定位符
-    mark = utils.ocr(fileBase + "wkw.png")
-    # 是否播放标识
-    if mark is not None:
-        while True:
+    while True:
+        # 首先找到定位符
+        mark = utils.ocr(fileBase + "wkw.png")
+        # 是否播放标识
+        if mark is not None:
             # 移动到定位符位置
             pyautogui.moveTo(mark.x,mark.y)
             print('正在查找待播放课程')
